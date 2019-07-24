@@ -13,7 +13,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     @IBOutlet weak var imageView: UIImageView!
     
-     let imagePicker = UIImagePickerController()
+    @IBOutlet weak var intensity: UISlider!
+    let imagePicker = UIImagePickerController()
     
     @IBAction func uploadImageButtonTapped(_ sender: Any) {
         imagePicker.allowsEditing = false
@@ -28,7 +29,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
 
-
+    @IBAction func changeFilter(_ sender: Any) {
+    }
+    
+    @IBAction func save(_ sender: Any) {
+    }
     // MARK: - UIImagePickerControllerDelegate Methods
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -40,6 +45,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func intensityChanged(_ sender: Any) {
+    }
     
 }
 
